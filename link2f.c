@@ -20,7 +20,7 @@ int choice=0;
 while(choice!=8)
 {
 printf("\n1.Insert in begining\n2.Insert at last\n3.Insert at any random location\n4.Delete from Beginning\n5.Delete from last\n6.Delete node after specified location\n7.Show\n8.Exit\n");
-printf("\nEnter your choice?\n");
+printf("\nEnter your choice:\n");
 scanf("\n%d",&choice);
 switch(choice)
 {
@@ -44,6 +44,7 @@ random_delete();
 break;
 case 7:
 display();
+printf("\n\n");
 break;
 case 8:
 exit(0);
@@ -156,13 +157,13 @@ void last_delete()
 struct node*ptr,*ptr1;
 if(head==NULL)
 {
-printf("\nlist is empty");
+printf("\nlist is empty\n\n");
 }
 else if(head->next==NULL)
 {
 head=NULL;
 free(head);
-printf("\nOnly node of the list deleted\n");
+printf("\nOnly node of the list deleted\n\n");
 }
 else
 {
@@ -190,7 +191,7 @@ ptr1=ptr;
 ptr=ptr->next;
 if(ptr==NULL)
 {
-printf("\nCan't delete");
+printf("\nCan't delete\n\n");
 return;
 }
 }
@@ -204,7 +205,7 @@ struct node*ptr;
 ptr=head;
 if(ptr==NULL)
 {
-printf("Nothing to print");
+printf("\nNothing to print\n\n");
 }
 else
 {
